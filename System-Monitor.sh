@@ -67,6 +67,7 @@ do
     fi
 
     # Get name of process with highest usage and output in red
+    # Grabs data from 8th line of top, which includes information about the process consuming the most CPU time
     highest_usage=$(top -bn1 | awk 'NR==8 {print $12}')
     echo -e "\e[31mHighest Usage From: $highest_usage"
 
