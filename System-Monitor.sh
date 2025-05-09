@@ -71,6 +71,7 @@ do
     highest_usage=$(top -bn1 | awk 'NR==8 {print $12}')
     echo -e "\e[31mHighest Usage From: $highest_usage"
 
+    # Print bottom border in magenta
     echo -e "\e[35m================================\e[0m"
     
     # Get current date and time and output all to CSV log file
